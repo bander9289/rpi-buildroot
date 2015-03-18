@@ -20,9 +20,9 @@ setup(
     description = ("PyBus by ezeakeal adapted to P38 Range Rover"),
     license = "GPLv2",
     keywords = "rpi raspberry pi ibus mpd pybus rover p38 p38a",
-    url = "git://github.com/bander9289/pybus",
-    packages=['pybus', 'pybus.lib'],
-    long_description=read('pybus/README.md'),
+    url = "git://github.com/bander9289/pyBus",
+    packages=['pyBus', 'pyBus.lib'],
+    long_description=read('pyBus/README.md'),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: Utilities",

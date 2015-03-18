@@ -6,11 +6,11 @@
 case "$1" in
   start)
  	echo "Starting iBus-mpd interface service ..."
-	python -m pybus &
+	python -m pyBus &
 	;;
   stop)
 	echo -n "Stopping iBus-mpd interface service..."
-	pid=`ps -ef | grep 'python -m pybus' | awk '{ print $2 }'`
+	pid=`ps -ef | grep 'python -m pyBus' | awk '{ print $2 }'`
   echo $pid
   kill $pid
   sleep 2

@@ -10,7 +10,8 @@ endef
 define PYBUS_ROVER_EXTRACT_CMDS
 	cp package/pybus_rover/setup.py $(@D)
 	tar -C $(@D) -zxf $(BR2_DL_DIR)/$(PYBUS_ROVER_SOURCE)
-	mv $(@D)/pyBus-master $(@D)/pybus
+	mv $(@D)/pyBus-master $(@D)/pyBus
+	cp package/pybus_rover/__init__.py $(@D)/pyBus
 endef
 
 $(eval $(python-package))
