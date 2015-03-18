@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# Start the pin shutdown service
+#
+
+case "$1" in
+  start)
+ 	echo "Starting pin shutdown service ..."
+	python -m pin_shutdown &
+	;;
+  stop)
+	echo -n "Stopping pin shutdown service..."
+	pid=`ps -ef | grep 'python -m pin_shutdown' | awk '{ print $2 }'`
+  echo $pid
+  kill $pid
+  sleep 2
+	;;
+  restart|reload)
+	"$0" stop
+	"$0" start
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?
+
